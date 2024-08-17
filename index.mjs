@@ -6,6 +6,7 @@ import db from './db/conn.mjs';
 import jsxViewEngine from 'jsx-view-engine';
 import methodOverride from 'method-override';
 import carRoutes from './controllers/car.mjs';
+import brandRoutes from './controllers/brand.mjs';
 
 
 
@@ -28,9 +29,10 @@ app.use(methodOverride('_method'));
 
 // routes
 app.use('/cars', carRoutes);
+app.use('/brands', brandRoutes);
 app.get('/', (req, res) => {
     res.send(
-        `<div> this is my cars and brands root route <br/><a href='/cars'>cars</a></div>`
+        `<div> this is my cars and brands root route <br/><a href='/cars'>cars</a> <br/><a href='/brands'>brands</a></div>`
     )
 })
 

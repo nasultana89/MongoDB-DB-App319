@@ -1,10 +1,10 @@
 const React = require('react');
 const DefaultLayout = require('../layout/Default');
 class Index extends React.Component {
-    render () {
+    render() {
         const { cars } = this.props;
         return (
-            <DefaultLayout title = {'Cars Index Page'}>
+            <DefaultLayout title={'Cars Index Page'}>
                 <nav>
                     <a href='/cars/new'>Create a New Car</a>
                 </nav>
@@ -13,11 +13,11 @@ class Index extends React.Component {
                         return (
                             <li>
                                 The {' '}
-                                <a href={`/fruits/${car._id}`}>
-                                {car.name}
+                                <a href={`/cars/${car._id}`}>
+                                    {car.name}
                                 </a>
                                 {' '}
-                                is {car.make} <br/>
+                                is {car.make} <br />
                                 {car.readyToDrive ? `It is ready to drive` : `It is NOT ready to drive`}
                                 <br />
                             </li>

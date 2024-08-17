@@ -12,7 +12,7 @@ class Edit extends React.Component {
                     Name: <input type="text" name="name" defaultValue={this.props.car.name} /><br />
                     Make: <input type="text" name="make" defaultValue={this.props.car.make} /><br />
                     Is Ready To Drive:
-                    {this.props.car.readyToCar ? <input type="checkbox" name="readyToDrive" defaultChecked /> : <input type="checkbox" name="readyToDrive" />}
+                    {this.props.car.readyToDrive ? <input type="checkbox" name="readyToDrive" defaultChecked /> : <input type="checkbox" name="readyToDrive" />}
                     <br />
                     <input type="submit" value="Submit Changes" />
                 </form>
